@@ -9,7 +9,7 @@ class Carousel {
 		this.element = element
 		this.options = Object.assign({}, {
 			slidesToScroll: 1,
-			slideVisible: 3
+			slideVisible: 4
 		}, options)
 
 		let children = [].slice.call(element.children)
@@ -86,7 +86,9 @@ class Carousel {
 }
 
 
-new Carousel(document.querySelector('#carousel1'))
+new Carousel(document.querySelector('#carousel-action'))
+new Carousel(document.querySelector('#carousel-commedie'))
+new Carousel(document.querySelector('#carousel-dramatique'))
 
 
 
