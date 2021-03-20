@@ -44,3 +44,39 @@ h2{
 	color: rgb(229, 9, 20);	
 	
 }
+
+h3 {
+	margin-top: 0px;
+
+}
+
+
+.description a, h3 {
+	color: white;
+
+}
+
+
+.img, .title, .description {
+	display: inline;
+}
+
+
+
+.title {
+	position: absolute;
+	margin-top: 0px;
+
+}
+.img {
+
+	margin-left: 0px;
+
+}
+
+.description {
+	margin-left: 0%;
+	position: absolute;
+	margin-top: 3%;
+	align-content: left;
+}
