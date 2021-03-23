@@ -1,5 +1,5 @@
 body {
-	background-color: #000000;
+	background-color: rgb(141, 151, 140 );
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
@@ -15,9 +15,25 @@ header {
 	width: 70%;
 }
 
+#nav {
+	margin-top: 2em;
+}
 #nav a {
     color: rgb(229, 9, 20);
 } 
+#nav ol {
+	list-style: none;
+}
+
+#nav ol li{
+	float: left;
+	margin-left: 2em;
+	text-decoration: none;
+}
+ #nav ol li a {
+ 	text-decoration: none;
+ 	font-size:  200%;
+ }
 
 section {
 	padding-top: 5%;
@@ -28,9 +44,13 @@ section {
 
 
 h1 {
+    font-size:  300%;
     color: rgb(229, 9, 20);
 } 
 
+.title_cat{
+	margin-bottom: 30px;
+}
 
 #action, #commedie, #dramatique, #meilleur_film {
 	width: 100%;
@@ -42,6 +62,7 @@ h1 {
 h2{
 	
 	color: rgb(229, 9, 20);	
+	font-size:  200%;
 	
 }
 
@@ -50,33 +71,59 @@ h3 {
 
 }
 
-
 .description a, h3 {
 	color: white;
 
 }
 
 
-.img, .title, .description {
-	display: inline;
+
+#meilleur_film {
+	width: 85%;
+	/*background: rgb(93, 93, 97);*/
+	height: auto;
+	margin-left: 7em;
 }
 
+#container_best_movie {
+margin: auto;
+
+
+}
+
+.img{
+	margin-left: 2em;
+	width: 182px;
+	height: 268px;
+	background-color: blue;
+	float: left;
+}
 
 
 .title {
-	position: absolute;
-	margin-top: 0px;
-
+	position: relative;
+	left: 225px;
 }
-.img {
 
-	margin-left: 0px;
-
-}
 
 .description {
-	margin-left: 0%;
-	position: absolute;
-	margin-top: 3%;
-	align-content: left;
+
+	overflow: auto;
+    height: 105px;
+    position: relative;
+    width: 65%;
+    left: +2em;
+
+
 }
+
+.play img{
+	position: relative;
+	max-width: 20%;
+	bottom: 15px;
+	top: +1em;
+	padding-bottom: 15px;
+}
+
+
+
