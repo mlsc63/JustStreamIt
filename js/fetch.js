@@ -12,23 +12,24 @@ let best_animation_movies = []
 
 
 
-function ajax(url, number=7) {
+function ajax(url, number) {
+
 	fetch(url)
 	    .then(res => {
 		    if(res.ok){
 			    res.json().then(data => {
 				    console.log("ok")
-				    if (number=7) {
-				    	for(let number = 0; number < 5; number++) {
-				    		console.log(data.results[number])
+				    if (number==7) {
+				    	for(let first_loop = 0; first_loop < 5; first_loop ++) {
+				    		console.log(data.results[first_loop])
 				    	}
 				    	fetch(data.next)
 				    	    .then(res => {
 				    	    	if(res.ok){
 				    	    		res.json().then(data => {
 				    	    			console.log('ok part 2')
-				    	    			for (let number = 0; number<2; number++ ) {
-				    	    				console.log(data.results[number])
+				    	    			for (let second_loop = 0; second_loop<2; second_loop++ ) {
+				    	    				console.log(data.results[second_loop])
 				    	    			}
 
 				    	    		})
@@ -48,7 +49,8 @@ function ajax(url, number=7) {
 }
 	
 
-ajax(url_action_movie)
+ajax(url_action_movie, 7)
+ajax(url_animation_movie, 1)
 
 /*
 function get_url(url, number=7) {
