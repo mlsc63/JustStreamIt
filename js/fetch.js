@@ -22,14 +22,8 @@ function ajax(url, number) {
 				    if (number==7) {
 				    	for(let first_loop = 0; first_loop < 5; first_loop ++) {
 				    		console.log(data.results[first_loop].image_url)
-				    		let img = document.getElementById('image-action-1')
-				    		/*
-				    		TODO
-				    		*/
-
-
-
-
+				    		console.log(first_loop)
+				    		let img = document.getElementById('image-action-'+(first_loop + 1))
 				    		console.log(img)
 				    		img.setAttribute("src", data.results[first_loop].image_url);
 
