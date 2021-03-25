@@ -21,7 +21,18 @@ function ajax(url, number) {
 				    console.log("ok")
 				    if (number==7) {
 				    	for(let first_loop = 0; first_loop < 5; first_loop ++) {
-				    		console.log(data.results[first_loop])
+				    		console.log(data.results[first_loop].image_url)
+				    		let img = document.getElementById('image-action-1')
+				    		/*
+				    		TODO
+				    		*/
+
+
+
+
+				    		console.log(img)
+				    		img.setAttribute("src", data.results[first_loop].image_url);
+
 				    	}
 				    	fetch(data.next)
 				    	    .then(res => {
@@ -29,7 +40,7 @@ function ajax(url, number) {
 				    	    		res.json().then(data => {
 				    	    			console.log('ok part 2')
 				    	    			for (let second_loop = 0; second_loop<2; second_loop++ ) {
-				    	    				console.log(data.results[second_loop])
+				    	    				console.log(data.results[second_loop].image_url)
 				    	    			}
 
 				    	    		})
