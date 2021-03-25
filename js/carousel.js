@@ -87,8 +87,8 @@ class Carousel {
 
 
 new Carousel(document.querySelector('#carousel-action'))
-new Carousel(document.querySelector('#carousel-commedie'))
-new Carousel(document.querySelector('#carousel-dramatique'))
+new Carousel(document.querySelector('#carousel-drama'))
+new Carousel(document.querySelector('#carousel-animation'))
 
 
 
