@@ -1,0 +1,59 @@
+#modal {
+	background-color: rgba(0, 0, 0, 0.8);
+	position: fixed;
+	top:0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	display: none;
+
+}
+
+#modal-wrapper {
+	overflow: auto;
+    width: 600px;
+    max-width: calc(100vw -20px);
+    max-height: calc(100vh -20px);
+	background-color: rgb(141, 151, 140 );
+
+}
+
+
+#modal_img {
+	float: left;
+	top: 20px;
+	right: 10px;
+	margin-left: 2em;
+}
+
+
+#modal_title {
+     top: 7px;
+     display: flex;
+     justify-content: center;
+     position: relative;
+
+}
+
+#modal_description {
+	width: 80%;
+	position: relative;
+	left: 2em;
+	margin-bottom: 2em;
+}
+
+#modal_close img {
+	max-width: 10%;
+	position: absolute;
+    top:0em;
+    right: 2em;
+
+}
+
+#modal_close img:hover{
+	transform: scale(1.3)
+}
+

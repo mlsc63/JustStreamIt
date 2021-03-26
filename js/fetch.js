@@ -4,46 +4,45 @@ const url_drama_movie = "http://localhost:8000/api/v1/titles/?genre=Drama&sort_b
 const url_animation_movie = "http://localhost:8000/api/v1/titles/?genre=Animation&sort_by=-imdb_score"
 
 
-let best_movie = []
-let best_action_movies = []
-let best_drama_movies = []
-let best_animation_movies = []
-
-
-
-
-function ajax(url, number) {
+function ajax(url, div, number) {
 
 	fetch(url)
 	    .then(res => {
 		    if(res.ok){
 			    res.json().then(data => {
-				    console.log("ok")
+				    /*If we need 7 feelback movies*/
 				    if (number==7) {
 				    	for(let first_loop = 0; first_loop < 5; first_loop ++) {
-				    		console.log(data.results[first_loop].image_url)
-				    		console.log(first_loop)
-				    		let img = document.getElementById('image-action-'+(first_loop + 1))
-				    		console.log(img)
-				    		img.setAttribute("src", data.results[first_loop].image_url);
-
+				    		document.getElementById(div +(first_loop + 1)).setAttribute("src", data.results[first_loop].image_url)			    	
 				    	}
 				    	fetch(data.next)
 				    	    .then(res => {
 				    	    	if(res.ok){
 				    	    		res.json().then(data => {
-				    	    			console.log('ok part 2')
+				    	    		
 				    	    			for (let second_loop = 0; second_loop<2; second_loop++ ) {
-				    	    				console.log(data.results[second_loop].image_url)
+				    	    				document.getElementById(div +(second_loop + 6)).setAttribute("src", data.results[second_loop].image_url)				    		                
 				    	    			}
-
 				    	    		})
 				    	    	} else {
 				    	    		console.log("Erreur part 2")
 				    	    	}
 				    	    })
 				    } else {
-				    	console.log("best movie TODO")
+
+				    	/* Second part, if only one movie */
+				    	document.getElementById(div).setAttribute("src", data.results[0].image_url)
+				        document.getElementById("title_best_movies").innerHTML = data.results[0].title
+				        fetch(data.results[0].url)
+				            .then(res =>{
+				            	if (res.ok){
+				            		res.json().then(data=> {
+				                        document.getElementById("description_text").innerText = data.description
+				            		})
+				            	}else {
+				            	console.log("pas ok")
+				                }
+				            }) 
 				    }
 
 			    })
@@ -54,76 +53,7 @@ function ajax(url, number) {
 }
 	
 
-ajax(url_action_movie, 7)
-ajax(url_animation_movie, 1)
-
-/*
-function get_url(url, number=7) {
-	fetch(url)
-	.then(res => res.json())
-	.then(data => console.log(data.results))
-    
-
-
-}
-
-
-get_url(url_animation_movie)
-*/
-/*
-for (let pas = 0; pas < 5; pas++) {
-	fetch(url_animation_movie)
-	.then(res => res.json())
-	.then(data => console.log(data.results))
-	fetch(data.next)
-	.then(res => res.json())
-	.then(data1 => console.log(data1.results))
-}
-*/
-
-
-
-
-
-
-
-
-
-/*
-Gérer les erreurs
-
-then(res => {
-	if (res.ok){
-	   res.json().then(data => {
-	       console.log("OK")
-	   })
-	} else {
-	    console.log("erreur")
-	    document.getElementByTagName(header).innerHTML = "erreur";
-	}
-
-
-})
-
-
-
-*/
-
-
-
-
-/*
-Remplacer une image 
-
-const img = document.getElementById('image1')
-console.log(img)
-
-fetch('http://localhost:8000/api/v1/titles/8571428')
-    .then(res => res.json())
-    .then(data => img.src = data.image_url)
-    
-  
- */ 
-    
-  
-   
+ajax(url_best_movie, 'image_best', 1)
+ajax(url_action_movie, 'image-action-', 7)
+ajax(url_drama_movie, 'image-drama-', 7)
+ajax(url_animation_movie, 'image-animation-', 7)
