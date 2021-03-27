@@ -13,7 +13,8 @@ function ajax(url, div, number) {
 				    /*If we need 7 feelback movies*/
 				    if (number==7) {
 				    	for(let first_loop = 0; first_loop < 5; first_loop ++) {
-				    		document.getElementById(div +(first_loop + 1)).setAttribute("src", data.results[first_loop].image_url)			    	
+				    		document.getElementById(div +(first_loop + 1)).setAttribute("src", data.results[first_loop].image_url)	
+				    		document.getElementById(div +(first_loop + 1)).setAttribute("href", data.results[first_loop].url)		    	
 				    	}
 				    	fetch(data.next)
 				    	    .then(res => {
@@ -21,7 +22,8 @@ function ajax(url, div, number) {
 				    	    		res.json().then(data => {
 				    	    		
 				    	    			for (let second_loop = 0; second_loop<2; second_loop++ ) {
-				    	    				document.getElementById(div +(second_loop + 6)).setAttribute("src", data.results[second_loop].image_url)				    		                
+				    	    				document.getElementById(div +(second_loop + 6)).setAttribute("src", data.results[second_loop].image_url)
+				    	    				document.getElementById(div +(second_loop + 6)).setAttribute("href", data.results[second_loop].url)				    		                
 				    	    			}
 				    	    		})
 				    	    	} else {
@@ -32,6 +34,7 @@ function ajax(url, div, number) {
 
 				    	/* Second part, if only one movie */
 				    	document.getElementById(div).setAttribute("src", data.results[0].image_url)
+				    	document.getElementById(div).setAttribute("href", data.results[0].url)
 				        document.getElementById("title_best_movies").innerHTML = data.results[0].title
 				        fetch(data.results[0].url)
 				            .then(res =>{
