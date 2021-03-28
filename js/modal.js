@@ -9,10 +9,11 @@ function upload(target){
 	   			console.log(data.id)
 	   			const title = document.getElementById('modal_title')
 	   			const img = document.getElementById('modale_img2')
-	   			const description = document.getElementById('description_text')
-	   			console.log(title)
-	   			console.log(img)
-	   			console.log(description)
+	   			const description = document.getElementById('modal_description')
+	   			title.innerHTML = '<h2>' + data.title +'</h2>'
+	   			img.setAttribute("src", data.image_url)
+	   			description.innerHTML = '<a>' + data.description + '<a>'
+
 	   			
 	   		})
 	   	}

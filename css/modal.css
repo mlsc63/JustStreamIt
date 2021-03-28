@@ -27,6 +27,7 @@
 	top: 20px;
 	right: 10px;
 	margin-left: 2em;
+	margin-bottom: 4em;
 }
 
 
@@ -46,11 +47,16 @@
 }
 
 #modal_close img {
-	max-width: 10%;
+	max-width: 5%; 
+    float: right;
+    position: relative;
+    margin-top: -80px;
+    margin-right: 10px;
+	/*
 	position: absolute;
     top:0em;
     right: 2em;
-
+*/
 }
 
 #modal_close img:hover{
