@@ -4,10 +4,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	
-
 }
-
 
 header {
 	display: flex;
@@ -19,7 +16,7 @@ header {
 	margin-top: 2em;
 }
 #nav a {
-    color: rgb(229, 9, 20);
+	color: rgb(229, 9, 20);
 } 
 #nav ol {
 	list-style: none;
@@ -30,10 +27,10 @@ header {
 	margin-left: 2em;
 	text-decoration: none;
 }
- #nav ol li a {
- 	text-decoration: none;
- 	font-size:  200%;
- }
+#nav ol li a {
+	text-decoration: none;
+	font-size:  200%;
+}
 
 section {
 	padding-top: 5%;
@@ -41,94 +38,65 @@ section {
 	align-items: center;
 }
 
-
-
 h1 {
-    font-size:  300%;
-    color: rgb(229, 9, 20);
+	font-size:  300%;
+	color: rgb(229, 9, 20);
 } 
+h2{
+	color: rgb(229, 9, 20);	
+	font-size:  200%;
+}
+
+h3 {
+	color: black;
+	margin-top: 0px;
+}
 
 .title_cat{
 	margin-bottom: 30px;
 }
 
-#meilleur_film, #action, #drama, #animation {
-	
+#best_movie_section, #action, #drama, #animation {	
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
-h2{
-	
-	color: rgb(229, 9, 20);	
-	font-size:  200%;
-	
-}
 
-h3 {
-	margin-top: 0px;
-
-}
-
-.description a, h3 {
-	color: white;
-
-}
-
-
-
-#meilleur_film {
-	width: 85%;
-	/*background: rgb(93, 93, 97);*/
-	height: auto;
+#best_movie {
+	width: 85%;	
 	margin-left: 7em;
-}
-
-#container_best_movie {
-margin: auto;
-
 
 }
 
-.img{
-	margin-left: 2em;
-	width: 182px;
-	height: 268px;
-	background-color: blue;
-	float: left;
+#best_movie_container {
+	height:20em;
 }
 
-
-.title {
+#best_movie_img {
+	float: right;
 	position: relative;
-	left: 225px;
+	right: 30%;
+	margin-bottom: 3em;
+	margin-top: 3em;
+	
 }
 
+#best_movie_title {
+	position: relative;
+	left: 350px;
+	top: 5em;
+	width: auto;
+}
 
-.description {
-
-	overflow: auto;
-    height: 105px;
+#best_movie_play{
     position: relative;
-    width: 65%;
-    left: +2em;
-
-
+    max-width: 20%;
+    left: 325px;
+    top:5em;
 }
 
-.play img{
-	position: relative;
-	max-width: 20%;
-	bottom: 15px;
-	top: +1em;
-	padding-bottom: 15px;
+#best_movie_container, #best_movie_play:hover{
+	 transform: scale(1.1)
 }
-
-
-#image_best:hover, .play img:hover{
-
-	transform: scale(1.1)
-}
-

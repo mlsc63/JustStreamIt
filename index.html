@@ -1,103 +1,110 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html>
-    <head>
-	    <meta charset="utf-8" />
-        <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="css/carousel.css" />
-        <link rel="stylesheet" href="css/modal.css" />
-        <title>JustStreamIt</title>
-    </head>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/carousel.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <title>JustStreamIt</title>
+</head>
 
-    <body>
-        <header>
-            <div id="logo">
-                <h1>JustStremIt</h1>
+<body>
+    <header>
+        <div id="logo">
+            <h1>JustStreamIt</h1>
+        </div>
+        <div id="nav">
+            <ol>
+                <li class="nav"><a href="#best_movie">Accueil</a></li>
+                <li class="nav"><a href="#action">Categories</a></li>
+                <li class="nav"><br></li>
+            </ol>
+        </div>
+    </header>
+
+
+    <section >
+        <div id="best_movie"> 
+            <h2 id="best_movie_section">Film le mieux noté</h2>
+            <div id="best_movie_container">
+                <img id="best_movie_img">
+                <h3 id="best_movie_title"></h3>                 
+                <img id="best_movie_play" src="img/play.png">
             </div>
-            <div id="nav">
-                <ol>
-                    <li class="nav"><a href="#">Accueil</a></li>
-                  <li class="nav"><a href="#">Categories</a></li>
-                    <li class="nav"><br>
-                    </li>
-                </ol>
+        </div>
+
+
+
+
+        <div id="action">
+            <div class="title_cat"><h2>Action</h2></div>
+            <div id="carousel-action">
+                <div class="items"><img class="img_movie" id="image-action-1"></div>
+                <div class="items"><img class="img_movie" id="image-action-2"></div>
+                <div class="items"><img class="img_movie" id="image-action-3"></div>
+                <div class="items"><img class="img_movie" id="image-action-4"></div>
+                <div class="items"><img class="img_movie" id="image-action-5"></div>
+                <div class="items"><img class="img_movie" id="image-action-6"></div>
+                <div class="items"><img class="img_movie" id="image-action-7"></div>
             </div>
-        </header>
-        <section >
-			
-            <div id="meilleur_film"> 
-				<div class="title_cat"><h2>Film le mieux noté</h2></div>
-                <div id="container_best_movie">
-                    <div class="img"><img id="image_best"src="img/test.jpg">
-                    </div>
-				    <div class="title"><h3 id="title_best_movies">The revenant</h3></div>
-				    <div class="description">
-                        <a id ="description_text"></a>
-                    
-                    </div>
-			       	<div class="play"><img class="img_movie" src="img/play.png"></div>
-			    	</div>
-                </div>
-			
+        </div>
+
+        <div id="drama">
+            <div class="title_cat"><h2>Commedie</h2></div>
+            <div id="carousel-drama">
+                <div class="items"><img class="img_movie" id="image-drama-1"></div>
+                <div class="items"><img class="img_movie" id="image-drama-2"></div>
+                <div class="items"><img class="img_movie" id="image-drama-3"></div>
+                <div class="items"><img class="img_movie" id="image-drama-4"></div>
+                <div class="items"><img class="img_movie" id="image-drama-5"></div>
+                <div class="items"><img class="img_movie" id="image-drama-6"></div>
+                <div class="items"><img class="img_movie" id="image-drama-7"></div>
             </div>
-            
-			
-			
-			<div id="action">
-				<div class="title_cat"><h2>Action</h2></div>
-                <div id="carousel-action">
-                    <div class="items"><img class="img_movie" id="image-action-1"></div>
-                    <div class="items"><img class="img_movie" id="image-action-2"></div>
-                    <div class="items"><img class="img_movie" id="image-action-3"></div>
-                    <div class="items"><img class="img_movie" id="image-action-4"></div>
-                    <div class="items"><img class="img_movie" id="image-action-5"></div>
-                    <div class="items"><img class="img_movie" id="image-action-6"></div>
-                    <div class="items"><img class="img_movie" id="image-action-7"></div>
-                </div>
-			</div>
-			
-			<div id="drama">
-				<div class="title_cat"><h2>Commedie</h2></div>
-                <div id="carousel-drama">
-                    <div class="items"><img class="img_movie" id="image-drama-1"></div>
-                    <div class="items"><img class="img_movie" id="image-drama-2"></div>
-                    <div class="items"><img class="img_movie" id="image-drama-3"></div>
-                    <div class="items"><img class="img_movie" id="image-drama-4"></div>
-                    <div class="items"><img class="img_movie" id="image-drama-5"></div>
-                    <div class="items"><img class="img_movie" id="image-drama-6"></div>
-                    <div class="items"><img class="img_movie" id="image-drama-7"></div>
-                </div>
-			</div>
-			
-			<div id="animation">
-				<div class="title_cat"><h2>Dramatique</h2></div>
-                <div id="carousel-animation">
-                    <div class="items"><img class="img_movie" id="image-animation-1"></div>
-                    <div class="items"><img class="img_movie" id="image-animation-2"></div>
-                    <div class="items"><img class="img_movie" id="image-animation-3"></div>
-                    <div class="items"><img class="img_movie" id="image-animation-4"></div>
-                    <div class="items"><img class="img_movie" id="image-animation-5"></div>
-                    <div class="items"><img class="img_movie" id="image-animation-6"></div>
-                    <div class="items"><img class="img_movie" id="image-animation-7"></div>
-                </div>
-			</div>
-        </section>
-    </body>
-    <div id="modal" style="display: none;">
-        <div>
-            <div id="modal-wrapper">
-                <div id="modal_title">
-                    <h2>TEST</h2>
-                </div>
-                <div id="modal_close"><img id="close"src="img/close.png"></div>
-                <div id="modal_img"><img id="modale_img2" src="img/test.jpg""></div>
-                <div id="modal_description">
-                </div>
-                
+        </div>
+
+        <div id="animation">
+            <div class="title_cat"><h2>Dramatique</h2></div>
+            <div id="carousel-animation">
+                <div class="items"><img class="img_movie" id="image-animation-1"></div>
+                <div class="items"><img class="img_movie" id="image-animation-2"></div>
+                <div class="items"><img class="img_movie" id="image-animation-3"></div>
+                <div class="items"><img class="img_movie" id="image-animation-4"></div>
+                <div class="items"><img class="img_movie" id="image-animation-5"></div>
+                <div class="items"><img class="img_movie" id="image-animation-6"></div>
+                <div class="items"><img class="img_movie" id="image-animation-7"></div>
             </div>
-         </div>
+        </div>
+    </section>
+
+
+    <div id="modal">
+        <div id="modal-wrapper">    
+            <img id="modal_close"src="img/close.png">   
+
+
+            <img id="modal_img" src="img/test.jpg">
+            <div id="modal_title"></div>
+            <div id="content_information">
+                <p class="madal_litle_title">Genre: <span id="modal_genres"></span></p>
+                <p class="madal_litle_title">Date de sortie: <span id="modal_date"></span></p>
+                <p class="madal_litle_title">Note: <span id="modal_rated"></span></p>
+                <p class="madal_litle_title">Score Imdb: <span id="modal_score_imdb"></span></p>
+                <p class="madal_litle_title">Réalisateur: <span id="modal_director"></span></p>
+                <p class="madal_litle_title">Acteurs: <span id="modal_actors"></span></p>
+                <p class="madal_litle_title">Durée: <span id="modal_duration"></span></p>
+                <p class="madal_litle_title">Pays d’origine: <span id="modal_contry"></p>
+                <p class="madal_litle_title">Résultat au Box Office: <span id="modal_resulat_box_office"></span></p>
+                <p class="madal_litle_title">Résumé: <span id="modal_abstract"></span></p> 
+            <div></div> 
+        
+
+        </div>
+    </div>    
+</body>
 </html>
+
 <script src="js/carousel.js" async></script>
-*/<script src="js/fetch.js" async></script>
+<script src="js/fetch.js" async></script>
 <script src="js/modal.js" async></script>
 
 
