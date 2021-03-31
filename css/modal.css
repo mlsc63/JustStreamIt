@@ -16,8 +16,6 @@
 #modal-wrapper {
 	overflow: auto;
 	width: 600px;
-	max-width: calc(100vw -20px);
-	max-height: calc(100vh -20px);
 	background-color: rgb(141, 151, 140 );
 	margin: auto;
 }

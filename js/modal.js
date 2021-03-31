@@ -4,7 +4,6 @@ function upload(target){
 	.then(res => {
 		if(res.ok){
 			res.json().then(data => {
-				console.log(data.id)
 				document.getElementById('modal_title').innerHTML = '<h2>' + data.title +'</h2>'
 				document.getElementById('modal_img').setAttribute("src", data.image_url)
 				document.getElementById('modal_abstract').innerHTML = '<a>' + data.long_description + '<a>'
@@ -15,8 +14,9 @@ function upload(target){
 				document.getElementById('modal_score_imdb').innerText = data.imdb_score 
 				document.getElementById('modal_director').innerText = data.directors 
 				document.getElementById('modal_actors').innerText = data.actors 
-				document.getElementById('modal_duration').innerText = data.actors + "minutes" 
-				document.getElementById('modal_resulat_box_office').innerText = data.reviews_from_users 
+				document.getElementById('modal_duration').innerText = data.duration + " minutes" 
+				document.getElementById('modal_resulat_box_office').innerText = data.worldwide_gross_income + ' ' + data.budget_currency 
+			    
 			})
 		}
 	})
